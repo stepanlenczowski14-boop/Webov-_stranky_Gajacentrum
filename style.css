@@ -1,0 +1,233 @@
+/* =========================
+   ZÁKLAD
+========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  color: white;
+
+  overflow-x: hidden;
+  position: relative;
+
+  /* 🌊 MODRÝ PREMIUM BACKGROUND */
+  background:
+    linear-gradient(
+      180deg,
+      #a8e0ff 0%,
+      #69c8ff 40%,
+      #2b8fd8 100%
+    );
+
+  min-height: 100vh;
+}
+
+/* =========================
+   VELRYBÍ PATTERN
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("whale-pattern.png");
+  background-repeat: repeat;
+  background-size: 180px;
+
+  opacity: 0.08;
+
+  animation: movePattern 40s linear infinite;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* jemný pohyb */
+@keyframes movePattern {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(100px, 100px);
+  }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 30px 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 10px;
+
+  letter-spacing: 3px;
+
+  text-shadow:
+    0 0 20px rgba(255,255,255,0.25);
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: normal;
+
+  color: rgba(255,255,255,0.9);
+
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  font-size: 20px;
+
+  color: rgba(255,255,255,0.85);
+
+  max-width: 800px;
+  margin: auto;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   LOGA
+========================= */
+
+.logo-buttons {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 60px;
+
+  max-width: 1200px;
+
+  margin: 60px auto;
+
+  padding: 0 30px;
+
+  justify-items: center;
+}
+
+/* karta */
+.logo-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+
+  background: rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  border-radius: 24px;
+
+  padding: 40px 30px;
+
+  transition: 0.35s;
+
+  width: 260px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* hover */
+.logo-btn:hover {
+  transform: translateY(-12px) scale(1.03);
+
+  background: rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* obrázky */
+.logo-btn img {
+  width: 200px;
+  height: auto;
+
+  margin-bottom: 18px;
+
+  transition: 0.3s;
+}
+
+.logo-btn:hover img {
+  transform: scale(1.05);
+}
+
+/* text */
+.logo-btn span {
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 40px 20px 100px 20px;
+
+  text-align: center;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 40px;
+
+  margin-bottom: 25px;
+}
+
+.about p {
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,0.9);
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+   EET INFO
+========================= */
+
+.etr-info {
+  position: fixed;
+
+  bottom: 12px;
+  right: 12px;
+
+  max-width: 320px;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  color: rgba(255,255,255,0.75);
+
+  background: rgba(0,0,0,0.25);
+
+  backdrop-filter: blur(8px);
+
+  padding: 12px;
+
+  border-radius: 12px;
+}
