@@ -6,9 +6,37 @@
   <title>Gaja Centrum</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .bg-logo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vw;
+      height: auto;
+      opacity: 0.18;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    section {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 
 <body>
+
+  <!-- VODOZNAK LOGA -->
+  <img src="logo-gajanek.png" class="bg-logo" alt="logo">
 
   <!-- HERO -->
   <section class="hero">
@@ -41,14 +69,14 @@
       </a>
 
       <!-- GOLF -->
-      <a href="#" class="logo-btn">
+      <a href="golf.html" class="logo-btn">
         <img src="minigolf.png" alt="Minigolf">
         <span>Minigolf</span>
       </a>
 
       <!-- GAJÁNEK -->
-      <a href="#" class="logo-btn">
-        <img src="gajanek.png" alt="Gajánek">
+      <a href="gajanek.html" class="logo-btn">
+        <img src="dětský koutek logo.png" alt="Gajánek">
         <span>Gajánek</span>
       </a>
 
